@@ -19,20 +19,24 @@ This project demonstrates the deployment of a local network honeypot to detect, 
 
 ### 1. Attacker Connection Attempt
 From the Kali Linux attacker machine, I simulated a reconnaissance and access attempt by targeting the commonly exploited Telnet service on Port 23.
+![](./Honeypot.png)
 ```bash
 telnet <Honeypot_IP>
 ```
 ### 2. Honeypot Activation & Intrusion Logging
 The moment the connection request hit the target machine, the Pentbox honeypot successfully tripped, dropped the connection/spoofed a response, and logged the signature.
-
+![](./attack.png)
 ## 📊 Caught in the Act: Honeypot Alerts
 Extracted Attacker Data:
 
 Attacker IP: 10.0.2.15 (Kali Linux VM)
 
 Targeted Port: Port 23 (Telnet)
-
+![](./alert.png)
 Alert Status: HONEYPOT ACTIVATED
+
+
+
 ---
 
 ## 🏁 Conclusion
